@@ -1,0 +1,129 @@
+body {
+  background-color: #777;
+  text-align: center;
+}
+
+span {
+  position: absolute;
+}
+
+svg {
+  width: 24vw;
+  height: 30vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+svg * {
+  transition: all .25s ease;
+}
+
+#s2:checked ~ svg * {
+  stroke-width: 1px;
+  stroke: white;
+  fill: #0005 !important;
+}
+
+#s3:checked ~ svg * {
+  fill: #fff5 !important;
+  stroke-width: 0.1px;
+  stroke: #333;
+}
+
+img {
+  width: 5em;
+}
+
+input[type="radio"] {
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  border: 3px solid #444;
+  background-color: #777;
+}
+
+input[type="radio"]:checked {
+  background-color: #fff;
+}
+
+.download-container {
+  display: none;
+}
+
+svg:hover + .download-container,
+.download-container:hover {
+  display: inline-block;
+}
+
+.download-link {
+  box-shadow: 0 0 0 2px;
+  transition: all .14s ease;
+  background-color: #fff;
+  color: black;
+  padding: 1em .5em;
+  text-decoration: none;
+  border-radius: .5em;
+  width: 10vw;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.download-link {
+  margin-left: 10px;
+}
+
+.download-link:first-child {
+  margin-left: -30vw;
+}
+
+.download-link:hover {
+  opacity: 1;
+  background-color: #a00;
+  color: white;
+  box-shadow: 0 0 0 2px #fff, 0 0.5em 1em rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+#s4:checked ~ svg {
+  background-color: #569;
+  transition: all 1s ease;
+}
+
+#s4:checked ~ svg * {
+  fill-opacity: 1 !important;
+  stroke-width: .1vw;
+  transform-origin: 2vw 2vw;
+  transform: rotate(25deg) scale(1.4);
+  stroke: transparent;
+}
+
+#s4:checked ~ svg *:nth-child(1n) {
+  fill: orchid;
+}
+
+#s4:checked ~ svg *:nth-child(2n) {
+  fill: plum;
+}
+
+#s4:checked ~ svg *:nth-child(4n) {
+  fill: pink;
+}
+
+#s4:checked ~ svg *:nth-child(3n) {
+  fill: salmon;
+}
+
+#s4:checked ~ svg *:nth-child(5n) {
+  fill: violet;
+}
+
+#s4:checked ~ svg *:nth-child(6n) {
+  fill: orangered;
+}
+
+#s4:checked ~ svg *:nth-child(7n) {
+  fill: thistle;
+}
