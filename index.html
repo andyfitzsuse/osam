@@ -16,6 +16,18 @@
 </div>
 
 
+
+<h3>type</h3>
+
+<input  id="type-all" type="radio" name="style" checked/>
+<label for="type-all">all</label>
+
+<input  id="type-icons" type="radio" name="style" />
+<label for="type-icons">icons</label>
+
+<input  id="type-logos" type="radio" name="style" />
+<label for="type-logos">logos</label>
+
 <h3>style</h3>
 
 <input  id="style-standard" type="radio" name="style" checked/>
@@ -61,6 +73,7 @@
 <br/>
   
 <section class="gallery">
+
   <div class="icon"> <img src="icons/app.svg" /><span class="tags">app  application</span></div>
   <div class="icon"> <img src="icons/code.svg" /><span class="tags">code</span></div>
   <div class="icon"> <img src="icons/rhel-slice.svg" /><span class="tags">red hat rhel linux</span></div>
@@ -68,7 +81,14 @@
   <div class="icon"> <img src="icons/server-private-cloud.svg" /><span class="tags">server private cloud</span></div>
   <div class="icon"> <img src="icons/server-virt.svg" /><span class="tags">server server-virt</span></div>
   <div class="icon"> <img src="icons/phone.svg" /><span class="tags">phone mobile smartphone android</span></div>
+  <div class="logo"> <img src="logos/javascript.svg" /><span class="tags">javascript language project code</span></div>
 
+  <div class="logo"> <img src="logos/svg.svg" /><span class="tags">svg logo standard format scalable vector graphics</span></div>
+
+  <div class="logo"> <img src="logos/akamai.svg" /><span class="tags">akamai cdn company</span></div>
+  <div class="logo"> <img src="logos/accenture.svg" /><span class="tags">accenture system integrator partner company</span></div>
+  <div class="logo"> <img src="logos/fedora.svg" /><span class="tags">fedora project distribution linux</span></div>
+  <div class="logo"> <img src="logos/inkscape.svg" /><span class="tags">inkscape project svg graphics</span></div>
 
 
   </section>
@@ -77,11 +97,13 @@
   <script  src="js/search.js"></script>
 
   <svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
     <filter id="show-shadows" x="-1" y="-1" height="7" width="7">
       <feGaussianBlur in="SourceGraphic" stdDeviation=".3"/>
     </filter>
     <linearGradient id="white-linear"><stop offset="0%" stop-color="#fff"/><stop offset="70%" stop-color="#ddd" stop-opacity=".95" /><stop offset="100%"  stop-color="#ccc"/></linearGradient>
-  </svg>
+  </defs>
+</svg>
 
 
 
