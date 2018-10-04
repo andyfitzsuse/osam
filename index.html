@@ -11,8 +11,10 @@
 
 <body>
 <!-- controls -->
-<input type="text" class="search" />
-<button class="clear">clear search</button>
+<div class="searchbox"><input type="text" class="search" />
+<span class="clear">clear</span>
+</div>
+
 
 <h3>style</h3>
 
@@ -29,13 +31,13 @@
 <label for="style-solid">retro</label>
 <h3>zoom</h3>
 <input  id="zoom-normal" type="radio" name="zoom" checked/>
-<label for="zoom-normal">regular</label>
+<label for="zoom-normal">1</label>
 <input  id="zoom-in" type="radio" name="zoom" />
-<label for="zoom-in">zoom-in</label>
+<label for="zoom-in">+</label>
 <input  id="zoom-out" type="radio" name="zoom" />
-<label for="zoom-out">zoom-out</label>
+<label for="zoom-out">–</label>
 
-
+<br>
 <h3>bg</h3>
 
 <input  id="bg-white" name="bg" type="radio" />
@@ -48,7 +50,7 @@
 <input  id="bg-mid" name="bg" type="radio" />
 <label for="bg-mid">mid</label>
 
-<input  id="bg-dark" name="bg" type="radio" checked />
+<input  id="bg-dark" name="bg" type="radio"  />
 <label for="bg-dark">dark</label>
 
 <input  id="bg-black" name="bg" type="radio" />
@@ -61,6 +63,7 @@
 <section class="gallery">
   <div class="icon"> <img src="icons/app.svg" /><span class="tags">app container application</span></div>
   <div class="icon"> <img src="icons/code.svg" /><span class="tags">code</span></div>
+  <div class="icon"> <img src="icons/rhel-slice.svg" /><span class="tags">red hat rhel linux</span></div>
   <div class="icon"> <img src="icons/server-public-cloud.svg" /><span class="tags">server public cloud</span></div>
   <div class="icon"> <img src="icons/server-private-cloud.svg" /><span class="tags">server private cloud</span></div>
   <div class="icon"> <img src="icons/server-virt.svg" /><span class="tags">server server-virt</span></div>

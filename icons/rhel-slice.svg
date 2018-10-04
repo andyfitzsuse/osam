@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10 10"  >
+ 
+
+<path class="icon-shadow" d="M.5 6.825V6.25L5 3.64l4.5 2.61v.6L5 9.42z" />
+<g class="rhel-slice">
+  <path class="fill-mid-red" d="M.5 6.247v-.576L5 3.06l4.5 2.608v.578L5 8.843z"/>
+  <path class="fill-dark-red" d="M.5 5.67v.578L5 8.845v-.578z"  />
+  <path class="fill-red" d="M9.5 5.67v.58L5 8.844v-.578z"  />
+</g>
+
+ 
+</svg>

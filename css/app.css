@@ -1,9 +1,10 @@
 body {
+  user-select:none;
   background-color: #777;
   text-align: center;
-}
+margin:0; padding:0;}
 
-
+*{box-sizing:border-box;}
 
 /*search*/
 .miss{display:none !important}
@@ -144,13 +145,20 @@ input[type="radio"]:checked {
   fill:#000;}
 
 .gallery .fill-blue{fill:#00a4e4}
+.gallery .fill-light-blue{fill:#d9f5fb}
 .gallery .fill-red{fill:#c00;}
 .gallery .fill-mid-red{fill:#a30000;}
 .gallery .fill-dark-red{fill:#820000;}
 
-.gallery .fill-darkish-grey{fill:#a0a0a0}
-.gallery .fill-dark-grey{fill:#949494}
+
+.gallery .fill-darker-slate{fill:#4c575e}
+.gallery .fill-dark-slate{fill:#5e6a71}
+.gallery .fill-slate{fill:#8a969e}
+
+.gallery .fill-darkest-grey{fill:#444}
 .gallery .fill-darker-grey{fill:#6a6a6a}
+.gallery .fill-dark-grey{fill:#949494}
+.gallery .fill-darkish-grey{fill:#a0a0a0}
 .gallery .fill-mid-grey{fill:#b8b9b9}
 .gallery .fill-light-grey{fill:#e6e6e6}
 
@@ -235,3 +243,32 @@ body > h3{margin-bottom:0; display:inline-block; margin-left: 4em;}
 input[type="radio"]{opacity:0; position:absolute; z-index:-1; }
 label{text-transform: uppercase;letter-spacing:.1em; font-size:.8rem; user-select:none; cursor:pointer;color:#888; padding: 1em; display:inline-block;}
 input[type="radio"]:checked + label{ color:#000; background-color:white; }
+
+
+[for="zoom-normal"], [for="zoom-in"] , [for="zoom-out"]{
+  box-shadow: 0 1px  5px rgba(0,0,0,0.2); display:inline-block; vertical-align:middle;width: 2em; height:2em; padding:0;  line-height:2em;   border-radius: 50%;  margin:0 -.1em;
+}
+
+
+
+.search{appearance:none; outline:0; border:none; font-size: 1rem; padding: 1em 1em}
+
+.searchbox{display:inline-block; position: relative; height:2rem; line-height:2rem;  width: 10em;}
+
+.searchbox .search{display:block; position:absolute; top:0; width: 100%;left:0;right:0; bottom:0;}
+
+.searchbox .clear{cursor:pointer; position:absolute; right:0; display:block;   appearance:none; overflow:hidden; border:0; border-radius:0; font-size: 1rem; text-indent:-4em; background-color transparent; width: 2em; }
+
+.clear:before,
+.clear:after{color:#777;content:""; transition: all .6s cubic-bezier(.6,.1,.1,1.5); width: 0;border-right:1px solid; display:block; height:1.25em; top:.3em; right:1em; position:absolute; transform: rotate(45deg)}
+
+.clear:before{transform:rotate(-45deg);}
+
+.clear:hover:before{transform:rotate(45deg); color:#222;}
+.clear:hover:after{transform:rotate(-45deg); color:#222;}
+
+
+.match svg{ animation: match .3s ease}
+
+@keyframes match{0%{box-shadow: inset 0 0 0 .2em; transform: translate(0, -.5em ); opacity:0}}
+
