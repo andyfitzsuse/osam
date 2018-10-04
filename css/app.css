@@ -184,7 +184,7 @@ input[type="radio"]:checked {
 
 #style-wireframe:checked ~ .gallery .logo path{fill:#6a6a6a; fill-opacity:.8;}
 #style-wireframe:checked ~ .gallery .icon path{fill:currentcolor;fill-opacity:.06;  stroke-linecap:round; stroke:currentcolor; 
-stroke-linejoin:round;stroke-width:.06%; stroke-opacity:.6;}
+stroke-linejoin:round;stroke-width:.06; stroke-opacity:.6;}
 #style-wireframe:checked ~ .gallery .icon-shadow{display:none;}
 
 
