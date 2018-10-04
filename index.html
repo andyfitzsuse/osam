@@ -10,19 +10,19 @@
 
 
 
-.icon-shadow{
+.gallery .icon-shadow{
     filter:url(#show-shadows);
     opacity:.2;
     fill:#000;}
 
-.fill-blue{fill:#00a4e4}
-.fill-red{fill:#c00;}
-.fill-mid-red{fill:#a30000;}
-.fill-dark-red{fill:#820000;}
-.fill-dark-grey{fill:#949494}
-.fill-mid-grey{fill:#b8b9b9}
-.fill-light-grey{fill:#e6e6e6}
-.icon-virt-dash{
+.gallery .fill-blue{fill:#00a4e4}
+.gallery .fill-red{fill:#c00;}
+.gallery .fill-mid-red{fill:#a30000;}
+.gallery .fill-dark-red{fill:#820000;}
+.gallery .fill-dark-grey{fill:#949494}
+.gallery .fill-mid-grey{fill:#b8b9b9}
+.gallery .fill-light-grey{fill:#e6e6e6}
+.gallery .icon-virt-dash{
     fill:none;
     stroke:#aaa;
     stroke-width:.1;
@@ -66,6 +66,8 @@ width: 12em; height:12em;}
 
 #bg-white:checked ~ .gallery {background-color:#fff;}
 
+#bg-black:checked ~ .gallery {background-color:#000;color:white;}
+#bg-red:checked ~ .gallery {background-color:#c00;color:white;}
 #bg-navy:checked ~ .gallery {background-color:#004153;color:white;}
 
 #bg-dark:checked ~ .gallery {
@@ -151,6 +153,12 @@ input[type="radio"]:checked + label{ color:#000; background-color:white; }
 
 <input  id="bg-dark" name="bg" type="radio" checked />
 <label for="bg-dark">dark</label>
+
+<input  id="bg-black" name="bg" type="radio" />
+<label for="bg-black">black</label>
+
+<input  id="bg-red" name="bg" type="radio" />
+<label for="bg-red">red</label>
 
 <input  id="bg-navy" name="bg" type="radio" />
 <label for="bg-navy">navy</label>
