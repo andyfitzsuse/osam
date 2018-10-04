@@ -43,6 +43,9 @@
   
   var clear = document.getElementsByClassName("clear")[0];
   clear.onclick = function() {
+    var search = document.getElementsByClassName("search")[0];
+    search.value = "";
+    
     var items = document.querySelectorAll(".gallery div");
   
     for (var i = 0; i < items.length; i++) {
