@@ -34,6 +34,8 @@ standard theme colors
 .gallery .fill-dark-red{     fill: #820000; }
 .gallery .fill-orange{       fill: #ec7a08; }
 
+.gallery .fill-green{        fill: #94c947; }
+.gallery .fill-light-green{        fill: #d9f0a6; }
 .gallery .fill-darker-slate{ fill: #4c575e; }
 .gallery .fill-dark-slate{   fill: #5e6a71; }
 .gallery .fill-slate{        fill: #8a969e; }
@@ -73,6 +75,11 @@ style switcher
 #style-line:checked ~ .gallery .shade,
 #style-line:checked ~ .gallery .icon-shadow{ display: none; }
 
+
+#style-fill:checked ~ .gallery .icon svg *{ fill: currentcolor !important; fill-rule:evenodd;color:inherit !important; stroke: none !important; fill-opacity: .5 !important; }
+#style-fill:checked ~ .gallery .icon svg .fill-shade,
+#style-fill:checked ~ .gallery .icon svg .shade{display:none;}
+#style-fill:checked ~ .gallery .icon-shadow{ display: none; }
 
 #type-logos:checked ~ .gallery .icon{ display: none; }
 #type-icons:checked ~ .gallery .logo{ display: none; }
