@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
-<path class="icon-shadow" d="M 0.5,6.825 V 6.25 L 5,3.64 9.5,6.25 v 0.6 L 5,9.42 Z"  />
+<defs>    <linearGradient id="white-linear"><stop offset="0%" stop-color="#fff"/><stop offset="70%" stop-color="#ddd" stop-opacity=".95" /><stop offset="100%"  stop-color="#ccc"/></linearGradient>
+</defs><path class="icon-shadow" d="M 0.5,6.825 V 6.25 L 5,3.64 9.5,6.25 v 0.6 L 5,9.42 Z"  />
 <g class="rhel-slice">
   <path class="fill-mid-red" d="M.5 6.247v-.576L5 3.06l4.5 2.608v.578L5 8.843z"/>
   <path class="fill-dark-red" d="M.5 5.67v.578L5 8.845v-.578z"  />

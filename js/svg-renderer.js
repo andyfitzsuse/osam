@@ -10,11 +10,11 @@ var Ajax = {
       else if (onerror) {
         onerror(xhr.status);
       }
-    }
+    };
     xhr.open('GET', url);
     xhr.send();
   }
-}
+};
 
 var getElementStyleString = function(sourceEl, cloneEl) {
   var sourceStyle = getComputedStyle(sourceEl);
@@ -30,7 +30,7 @@ var getElementStyleString = function(sourceEl, cloneEl) {
   }
   
   return styleString;
-}
+};
 
 var serializeSvg = function(sourceSvgElement, width, height) {
   var svgClone = sourceSvgElement.cloneNode(true);
@@ -56,7 +56,7 @@ var serializeSvg = function(sourceSvgElement, width, height) {
   
   svgClone.remove();
   return new XMLSerializer().serializeToString(svgClone);
-}
+};
 
 var createHyperlink = function(url, text) {
   var a = document.createElement('a');
@@ -64,8 +64,9 @@ var createHyperlink = function(url, text) {
   a.innerText = text;
   
   return a;
-}
+};
 
+// Making the buttons
 var createImgDownloadButton = function(onclickPng, onclickSvg) {
   var container = document.createElement('span');
   container.className = 'download-container';
@@ -86,7 +87,7 @@ var createImgDownloadButton = function(onclickPng, onclickSvg) {
   container.appendChild(svgButton);
   
   return container;
-}
+};
 
 var getTargetSizeFromClientRect = function(clientRect, maxWidth, maxHeight) {
   var sourceWidth = clientRect.width;
@@ -98,9 +99,11 @@ var getTargetSizeFromClientRect = function(clientRect, maxWidth, maxHeight) {
   return {
     width: (sourceWidth * ratio),
     height: (sourceHeight * ratio)
-  }
-}
+  };
+};
 
+
+// PNG SERIALIZER
 var onDownloadPngClick = function(svg) {
   return function(e) {
     var canvas = document.createElement('canvas');
@@ -126,11 +129,13 @@ var onDownloadPngClick = function(svg) {
       document.body.removeChild(a);
       canvas.remove();
       img.remove();
-    }
+    };
     img.src = url;
-  }
-}
+  };
+};
 
+
+// SVG COMPILER
 var onDownloadSvgClick = function(svg) {
   return function(e) {
     var targetSize = getTargetSizeFromClientRect(svg.getBoundingClientRect(), 512, 512);
@@ -141,8 +146,15 @@ var onDownloadSvgClick = function(svg) {
     var url = win.createObjectURL(blob);
     e.target.href = url;
     e.target.download = (svg.id || 'original-filename') + '.svg';
-  }
-}
+  };
+};
+
+
+
+
+//  this takes all <img src=".svg"> 
+//  and makes it inline <svg ...</svg> 
+//  so that custom CSS can be applied
 
 var onImgSvgDownloaded = function(img) {
   return function(data) {
@@ -155,13 +167,11 @@ var onImgSvgDownloaded = function(img) {
     
     var imgDownloadButton = createImgDownloadButton(onDownloadPngClick(svg), onDownloadSvgClick(svg));
     svg.parentNode.insertBefore(imgDownloadButton, svg.nextSibling);
-  }
-}
-
+  };
+};
 var svgImages = document.querySelectorAll('[src$=".svg"]');
 for (var i = 0; i < svgImages.length; i++) {
   var img = svgImages[i];
   var imgUrl = img.getAttribute('src');
-  
   Ajax.get(imgUrl, onImgSvgDownloaded(img));
 }
