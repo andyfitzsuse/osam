@@ -13,6 +13,7 @@
           searchbox.value.trim().length > 0
             ? new RegExp(searchbox.value.trim(), "gi")
             : "";
+            
   
         /* Define the items where the search will run */
         var items = document.querySelectorAll(".gallery div");
