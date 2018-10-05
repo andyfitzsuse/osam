@@ -71,13 +71,13 @@ var createImgDownloadButton = function(onclickPng, onclickSvg) {
   var container = document.createElement('span');
   container.className = 'download-container';
   
-  var pngButton = createHyperlink('#', 'Get PNG');
+  var pngButton = createHyperlink('#', 'PNG');
   pngButton.className = 'download-link';
   if (onclickPng) {
     pngButton.onclick = onclickPng;
   }
   
-  var svgButton = createHyperlink('#', 'Get SVG');
+  var svgButton = createHyperlink('#', 'SVG');
   svgButton.className = 'download-link';
   if (onclickSvg) {
     svgButton.onclick = onclickSvg;
