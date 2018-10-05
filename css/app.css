@@ -49,7 +49,7 @@ standard theme colors
 style switcher
 */
 #style-standard:checked ~ #bg-white:checked ~ .gallery .logo path {color:#555}
-#style-solid:checked ~ .gallery .icon path{ stroke: #000 !important; vector-effect:non-scaling-stroke !important; stroke-width: 1 !important;  stroke-opacity: 0.8 !important; }
+#style-solid:checked ~ .gallery .icon *{ stroke: #000 !important; vector-effect:non-scaling-stroke !important; stroke-width: 1 !important;  stroke-opacity: 0.8 !important; }
 #style-solid:checked ~ .gallery .icon-virt-dash{ stroke-opacity: 1; stroke: currentcolor; }
 #style-solid:checked ~ .gallery .icon-shadow{ filter: none; }
 #style-grey:checked ~ .gallery svg{ filter: grayscale(1) contrast(0.6) brightness(1.2); }
