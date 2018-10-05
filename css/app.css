@@ -24,16 +24,20 @@ standard theme colors
 
 .stroke-shade{stroke:rgba(0,0,0,0.2); stroke-width:.1; fill:none; }
 .fill-shade{fill:rgba(0,0,0,0.2);  }
+.fill-light-shade{fill:rgba(255,255,255,0.5);  }
 .gallery .icon-shadow{ filter: url("#show-shadows"); opacity: 0.2; fill: #000; }
 .gallery .fill-blue{         fill: #00a4e4; }
 .gallery .fill-light-blue{   fill: #d9f5fb; }
 .gallery .fill-red{          fill: #c00; }
 .gallery .fill-mid-red{      fill: #a30000; }
+
 .gallery .fill-dark-red{     fill: #820000; }
+.gallery .fill-orange{       fill: #ec7a08; }
+
 .gallery .fill-darker-slate{ fill: #4c575e; }
 .gallery .fill-dark-slate{   fill: #5e6a71; }
 .gallery .fill-slate{        fill: #8a969e; }
-.gallery .fill-darkest-grey{ fill: #444; }
+.gallery .fill-darkest-grey{ fill: #444444; }
 .gallery .fill-darker-grey{  fill: #6a6a6a; }
 .gallery .fill-dark-grey{    fill: #949494; }
 .gallery .fill-darkish-grey{ fill: #a0a0a0; }
@@ -41,6 +45,8 @@ standard theme colors
 .gallery .fill-grey{     fill: #ccc; }
 
 .gallery .fill-light-grey{   fill: #e6e6e6; }
+.gallery .fill-lighter-grey{   fill: #f6f6f6; }
+.gallery .fill-lightest-grey{   fill: #fafafa; }
 .gallery .icon-virt-dash{  stroke: #aaa; fill: none; stroke-width: 0.1; stroke-linecap: round;stroke-dasharray: 0.3 0.3; stroke-opacity: 0.75; animation: virt-dash 999s linear infinite; }
 @keyframes virt-dash{ 100%{ stroke-dashoffset: 999; }}
 
@@ -56,14 +62,22 @@ style switcher
 #style-grey:checked ~ .gallery .icon-virt-dash{ opacity: 1; stroke: currentcolor; }
 
 #style-wireframe:checked ~ .gallery .logo path{ fill:currentcolor; fill-opacity: 0.8; }
-#style-wireframe:checked ~ .gallery .icon svg *{ fill: currentcolor !important; color:inherit !important; stroke: currentcolor !important; fill-opacity: 0.036 !important;  <div class="icon"> <img src="icons/iso-directions.svg" /><span class="tags">directions scale crossroads</span></div>
- stroke-linecap: round;  stroke-linejoin: round;  stroke-opacity: 0.6 !important; vector-effect:non-scaling-stroke !important; stroke:currentcolor;  stroke-width:1px !important;}
+#style-wireframe:checked ~ .gallery .icon svg *{ fill: currentcolor !important; color:inherit !important; stroke: currentcolor !important; fill-opacity: 0.036 !important;   stroke-linecap: round;  stroke-linejoin: round;  stroke-opacity: 0.6 !important; vector-effect:non-scaling-stroke !important; stroke:currentcolor;  stroke-width:1px !important;}
 #style-wireframe:checked ~ .gallery .fill-shade,
 #style-wireframe:checked ~ .gallery .icon-shadow{ display: none; }
+
+
+
+#style-line:checked ~ .gallery .icon svg *{ fill: transparent !important; color:inherit !important; stroke: currentcolor !important; fill-opacity: 1 !important;   stroke-linecap: round;  stroke-linejoin: round;  stroke-opacity: 1 !important; vector-effect:non-scaling-stroke !important; stroke:currentcolor;  stroke-width:3px !important;}
+#style-line:checked ~ .gallery .fill-shade,
+#style-line:checked ~ .gallery .shade,
+#style-line:checked ~ .gallery .icon-shadow{ display: none; }
+
 
 #type-logos:checked ~ .gallery .icon{ display: none; }
 #type-icons:checked ~ .gallery .logo{ display: none; }
 
+#style-line:checked ~ .gallery .icon .icon-virt-dash{vector-effect:unset !important; stroke-width: .23 !important }
 #style-wireframe:checked ~ .gallery .icon .icon-virt-dash,
 #style-solid:checked ~ .gallery .icon .icon-virt-dash{vector-effect:unset !important; stroke-width: .1 !important }
 /* 
