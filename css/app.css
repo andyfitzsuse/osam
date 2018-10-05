@@ -41,7 +41,7 @@ standard theme colors
 .gallery .fill-grey{     fill: #ccc; }
 
 .gallery .fill-light-grey{   fill: #e6e6e6; }
-.gallery .icon-virt-dash{  stroke: #aaa; fill: none; stroke-width: 0.1; stroke-linecap: round; stroke-dasharray: 0.3 0.3; stroke-opacity: 0.75; animation: virt-dash 999s linear infinite; }
+.gallery .icon-virt-dash{  stroke: #aaa; fill: none; stroke-width: 0.1; stroke-linecap: round;stroke-dasharray: 0.3 0.3; stroke-opacity: 0.75; animation: virt-dash 999s linear infinite; }
 @keyframes virt-dash{ 100%{ stroke-dashoffset: 999; }}
 
 
@@ -64,6 +64,8 @@ style switcher
 #type-logos:checked ~ .gallery .icon{ display: none; }
 #type-icons:checked ~ .gallery .logo{ display: none; }
 
+#style-wireframe:checked ~ .gallery .icon .icon-virt-dash,
+#style-solid:checked ~ .gallery .icon .icon-virt-dash{vector-effect:unset !important; stroke-width: .1 !important }
 /* 
 styling the background and items of the gallery 
 */
