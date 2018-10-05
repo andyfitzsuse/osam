@@ -14,7 +14,6 @@ input[type="radio"]:checked + label{ color: #000; background-color: #fff; }
 
 
 .download-container{ width: 100%; display: block; white-space: nowrap; bottom: 1em; left: 0; }
-
 .download-link{ opacity:.75; margin: 0 0.5em; transition: all 0.14s ease; padding: .75em 0.5em; text-decoration: none; display: inline-block; white-space: nowrap; font-size: 0.5rem;   color:currentcolor; box-shadow: inset 0  -.1em; text-align: center; font-family: sans-serif; }
 .download-link:before{content:"\2193  "; }
 .download-link:hover{ opacity: 1; background-color: #a00; color: #fff; box-shadow: 0 0 0 1px #c00, 0 0.5em 1em rgba(0,0,0,0.5); }
@@ -49,16 +48,16 @@ standard theme colors
 /*
 style switcher
 */
-#style-solid:checked ~ .gallery .icon path{ stroke: #000; vector-effect:non-scaling-stroke; stroke-width: 1; stroke-opacity: 0.8; }
+#style-standard:checked ~ #bg-white:checked ~ .gallery .logo path {color:#555}
+#style-solid:checked ~ .gallery .icon path{ stroke: #000 !important; vector-effect:non-scaling-stroke !important; stroke-width: 1 !important;  stroke-opacity: 0.8 !important; }
 #style-solid:checked ~ .gallery .icon-virt-dash{ stroke-opacity: 1; stroke: currentcolor; }
 #style-solid:checked ~ .gallery .icon-shadow{ filter: none; }
 #style-grey:checked ~ .gallery svg{ filter: grayscale(1) contrast(0.6) brightness(1.2); }
 #style-grey:checked ~ .gallery .icon-virt-dash{ opacity: 1; stroke: currentcolor; }
 
-#style-wireframe:checked ~ .gallery .logo path{ fill: #6a6a6a; fill-opacity: 0.8; }
-#style-wireframe:checked ~ .gallery .icon path{ fill: currentcolor; fill-opacity: 0.06; stroke-linecap: round;  stroke-linejoin: round;  stroke-opacity: 0.6; 
-
-vector-effect:non-scaling-stroke; stroke:currentcolor;  stroke-width:1px !important;}
+#style-wireframe:checked ~ .gallery .logo path{ fill:currentcolor; fill-opacity: 0.8; }
+#style-wireframe:checked ~ .gallery .icon svg *{ fill: currentcolor !important; color:inherit !important; stroke: currentcolor !important; fill-opacity: 0.036 !important;  <div class="icon"> <img src="icons/iso-directions.svg" /><span class="tags">directions scale crossroads</span></div>
+ stroke-linecap: round;  stroke-linejoin: round;  stroke-opacity: 0.6 !important; vector-effect:non-scaling-stroke !important; stroke:currentcolor;  stroke-width:1px !important;}
 #style-wireframe:checked ~ .gallery .fill-shade,
 #style-wireframe:checked ~ .gallery .icon-shadow{ display: none; }
 
@@ -73,11 +72,11 @@ styling the background and items of the gallery
 .gallery{ transition: background-color 0.24s ease; text-align: center; min-height: 50vh; }
 .gallery svg{ width: 100%; height:85%; display: block; margin: 0 auto; margin-bottom: 4em; padding: 0; overflow: hidden; }
 svg *{ transition: all 0.25s ease; }
-.gallery .logo path{ fill: currentcolor; }
 
+.gallery .logo path{ fill: currentcolor; }
 .gallery > div{ transition: all 0.3s ease; max-width: 100%; max-height: 100%; position: relative; width: 12em; height: 12em; display: inline-block; padding: 0.5rem; vertical-align: top; padding-bottom: 3rem; }
 .gallery span{ position: absolute; }
-.gallery span.tags{ width: 100%; text-align: center; left: 0; bottom: 3rem; text-transform: uppercase; font-size: 0.5em; }
+.gallery span.tags{ width: 100%; opacity:.4; text-align: center; left: 0; bottom: 3rem; text-transform: uppercase; font-size: 0.5em; }
 
 /*
 zoom feature
@@ -93,11 +92,18 @@ zoom feature
 background switch feature 
 */
 #bg-white:checked ~ .gallery{ background-color: #fff; }
-#bg-red:checked ~ .gallery{ background-color: #c00; color: #fff; }
-#bg-navy:checked ~ .gallery{ background-color: #004153; color: #fff; }
-#bg-dark:checked ~ .gallery{ background-size: 1.2em 1.2em; background-position: 0 0, 0.6em 0.6em; background-color: #000; color: #fff; background-image: linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222), linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222); }
+#bg-dark:checked ~ .gallery{ background-size: 1.2em 1.2em; background-position: 0 0, 0.6em 0.6em; background-color: #000; color: #eee; background-image: linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222), linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222); }
+
+/*logomono featuire*/
+
+#bg-mid:checked ~ .gallery .only-light-background,
+#bg-dark:checked ~ .gallery .only-light-background{display:none !important}
+#bg-mid:checked ~ .gallery .only-dark-background,
+#bg-dark:checked ~ .gallery .only-dark-background{display:block !important}
+
+
 #bg-light:checked ~ .gallery{ color: #000; background-size: 1.2em 1.2em; background-position: 0 0, 0.6em 0.6em; background-color: #ddd; background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc); }
-#bg-mid:checked ~ .gallery{ background-size: 1.2em 1.2em; background-position: 0 0, 0.6em 0.6em; background-color: #777; background-image: linear-gradient(45deg, #888 25%, transparent 25%, transparent 75%, #888 75%, #888), linear-gradient(45deg, #888 25%, transparent 25%, transparent 75%, #888 75%, #888); }
+#bg-mid:checked ~ .gallery{ color:#fff;background-size: 1.2em 1.2em; background-position: 0 0, 0.6em 0.6em; background-color: #777; background-image: linear-gradient(45deg, #888 25%, transparent 25%, transparent 75%, #888 75%, #888), linear-gradient(45deg, #888 25%, transparent 25%, transparent 75%, #888 75%, #888); }
 
 
 /* 
