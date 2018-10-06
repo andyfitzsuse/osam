@@ -75,8 +75,9 @@ style switcher
 #style-line:checked ~ .gallery .shade,
 #style-line:checked ~ .gallery .icon-shadow{ display: none; }
 
+#style-fill:checked ~ .gallery .icon svg{transform:scale(.5)}
 
-#style-fill:checked ~ .gallery .icon svg *{ fill: currentcolor !important; fill-rule:evenodd;color:inherit !important; stroke: none !important; fill-opacity: .5 !important; }
+#style-fill:checked ~ .gallery .icon svg *{ vector-effect: non-scaling-stroke !important; stroke-width: 1.5 !important ; stroke:#fff !important; fill: currentcolor !important; fill-rule:evenodd;color:inherit !important;   fill-opacity: .95 !important; }
 #style-fill:checked ~ .gallery .icon svg .fill-shade,
 #style-fill:checked ~ .gallery .icon svg .shade{display:none;}
 #style-fill:checked ~ .gallery .icon-shadow{ display: none; }
