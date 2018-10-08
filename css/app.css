@@ -19,23 +19,29 @@ input[type="radio"]:checked + label{ color: #000; background-color: #fff; }
 .download-link:hover{ opacity: 1; background-color: #a00; color: #fff; box-shadow: 0 0 0 1px #c00, 0 0.5em 1em rgba(0,0,0,0.5); }
 
 /*
-standard theme colors
+standard theme colors (MUST INCLUDE .gallery ) 
 */
 
-.stroke-shade{stroke:rgba(0,0,0,0.2); stroke-width:.1; fill:none; }
-.fill-shade{fill:rgba(0,0,0,0.2);  }
-.fill-light-shade{fill:rgba(255,255,255,0.5);  }
+.gallery .switch{fill:currentcolor;}
+.gallery .stroke-shade{stroke:rgba(0,0,0,0.2); stroke-width:.1; fill:none; }
+.gallery .fill-shade{fill:rgba(0,0,0,0.2);  }
+.gallery .fill-shade-weak{fill:rgba(0,0,0,0.1);  }
+.gallery .fill-light-shade{fill:rgba(255,255,255,0.5);  }
 .gallery .icon-shadow{ filter: url("#show-shadows"); opacity: 0.2; fill: #000; }
+.gallery .fill-navy{         fill: #004153;}
+.gallery .fill-teal{         fill: #007a87;}
 .gallery .fill-blue{         fill: #00a4e4; }
 .gallery .fill-light-blue{   fill: #d9f5fb; }
-.gallery .fill-red{          fill: #c00; }
+.gallery .fill-red{          fill: #cc0000; }
 .gallery .fill-mid-red{      fill: #a30000; }
-
 .gallery .fill-dark-red{     fill: #820000; }
+.gallery .fill-darker-red{   fill: #770000; }
+.gallery .fill-darkest-red{  fill: #550000; }
 .gallery .fill-orange{       fill: #ec7a08; }
-
+.gallery .fill-yellow{       fill: #ffb612; }
 .gallery .fill-green{        fill: #94c947; }
-.gallery .fill-light-green{        fill: #d9f0a6; }
+.gallery .fill-light-green{  fill: #d9f0a6; }
+.gallery .fill-darkest-slate{fill: #304551; }
 .gallery .fill-darker-slate{ fill: #4c575e; }
 .gallery .fill-dark-slate{   fill: #5e6a71; }
 .gallery .fill-slate{        fill: #8a969e; }
@@ -73,11 +79,12 @@ style switcher
 #style-line:checked ~ .gallery .icon svg *{ fill: transparent !important; color:inherit !important; stroke: currentcolor !important; fill-opacity: 1 !important;   stroke-linecap: round;  stroke-linejoin: round;  stroke-opacity: 1 !important; vector-effect:non-scaling-stroke !important; stroke:currentcolor;  stroke-width:3px !important;}
 #style-line:checked ~ .gallery .fill-shade,
 #style-line:checked ~ .gallery .shade,
+#style-line:checked ~ .gallery .fill-shade-weak,
 #style-line:checked ~ .gallery .icon-shadow{ display: none; }
 
-#style-fill:checked ~ .gallery .icon svg{transform:scale(.5)}
+#style-fill:checked ~ .gallery .icon svg{transform:scale(.5); opacity:.5}
 
-#style-fill:checked ~ .gallery .icon svg *{ vector-effect: non-scaling-stroke !important; stroke-width: 1.5 !important ; stroke:#fff !important; fill: currentcolor !important; fill-rule:evenodd;color:inherit !important;   fill-opacity: .95 !important; }
+#style-fill:checked ~ .gallery .icon svg *{ vector-effect: non-scaling-stroke !important; stroke-width:2 !important ; stroke:#fff !important; fill: currentcolor !important; fill-rule:evenodd;color:inherit !important;   fill-opacity: .95 !important; }
 #style-fill:checked ~ .gallery .icon svg .fill-shade,
 #style-fill:checked ~ .gallery .icon svg .shade{display:none;}
 #style-fill:checked ~ .gallery .icon-shadow{ display: none; }
