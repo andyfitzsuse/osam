@@ -6,10 +6,50 @@ form
 */
 body > h3{ margin-bottom: 0; font-size: 1rem; display: inline-block; margin-left: 2rem; }
 /* hide the real tabs */  input[type="radio"]{ opacity: 0; position: absolute; z-index: -1; }
-/*using labels for aesthetics */ label{ text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.6rem; user-select: none; cursor: pointer; color: #888; padding: 1em; display: inline-block; }
+/*using labels for aesthetics */ label{ z-index:3; position:relative;text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.6rem; user-select: none; cursor: pointer; color: #ccc; padding: 1em; display: inline-block; border-bottom:.1em solid #555;}
 input[type="radio"]:checked + label{ color: #000; background-color: #fff; }
 
 
+#show-hide ~ h3,
+#show-hide:not(:checked) ~ .searchbox,
+#show-hide:not(:checked) ~ label{display:none;}
+#show-hide:checked ~ label{}
+
+#show-hide{opacity:0; position:absolute; z-index:-1;}
+label[for="show-hide"]{z-index:2;position:fixed; width: 3rem; height:3rem; background-color:#fff; display:block !important;  box-shadow: inset 0 0 0 .2em currentcolor ;top:0; left:0; margin:0; overflow:hidden; text-indent: 4rem;}
+label[for="show-hide"]:after{content:""; position:fixed; width:2rem; left: .5rem; border-top: .2em solid currentcolor; height: 1.4rem;border-bottom: .2em solid currentcolor; top: .6rem; transition: all .15s ease;}
+label[for="show-hide"]:before{content:""; position:fixed; width:2rem; left: .5rem; border-top: .1em solid currentcolor; height: 0rem;border-bottom: .1em solid currentcolor; top: 1.45rem;transition: all .15s ease;}
+
+#show-hide:checked ~ label[for="show-hide"]{color:white; background-color:transparent}
+#show-hide:checked ~ label[for="show-hide"]:after{transform: rotate(45deg); height: 0; border-width: .1em; top: 1.5rem}
+#show-hide:checked ~ label[for="show-hide"]:before{transform: rotate(-45deg); height: 0; border-width: .1em; top: 1.5rem}
+
+#show-hide:checked ~ .overlay{ background-color:rgba(0,0,0,0.8); position:fixed; top:0; left:0;  width: 33vw;bottom:0; z-index:1;}
+#show-hide:checked ~ .gallery{margin-left: 33vw;}
+
+#show-hide:checked ~ .searchbox{position:fixed; left: 1vw; top: 4rem; z-index:9; width: 31vw; height: 4rem;}
+
+#show-hide:checked ~ [for="type-icons"]{position:fixed; top: 8rem; left: 11.5vw; width: 10vw;}
+#show-hide:checked ~ [for="type-logos"]{position:fixed; top: 8rem; left: 22vw; width: 10vw;}
+#show-hide:checked ~ [for="type-all"]{position:fixed; top: 8rem; left: 1vw; width: 10vw;}
+
+
+#show-hide:checked ~ [for="bg-white"]{position:fixed; top: 11rem;left:1vw; width: 7vw;}
+#show-hide:checked ~ [for="bg-light"]{position:fixed; top: 11rem;left:9vw; width: 7vw}
+#show-hide:checked ~ [for="bg-mid"]{position:fixed; top: 11rem;left:17vw; width: 7vw;}
+#show-hide:checked ~ [for="bg-dark"]{position:fixed; top: 11rem;left:25vw; width: 7vw;}
+
+#show-hide:checked ~ [for="style-standard"]{position:fixed; top: 14rem;left:1vw; width: 7vw;}
+#show-hide:checked ~ [for="style-line"]{position:fixed; top: 14rem;left:9vw; width: 7vw;}
+#show-hide:checked ~ [for="style-fill"]{position:fixed; top: 14rem;left:17vw; width: 7vw;}
+#show-hide:checked ~ [for="style-grey"]{position:fixed; top: 14rem;left:25vw; width: 7vw;}
+#show-hide:checked ~ [for="style-wireframe"]{position:fixed; top: 17rem;left:1vw; width: 7vw;}
+#show-hide:checked ~ [for="style-solid"]{position:fixed; top: 17rem;left:9vw; width: 7vw;}
+
+
+#show-hide:checked ~ [for="zoom-normal"]{position:fixed; top: 1rem; left: 5vw; background-color:#eee; color:  }
+#show-hide:checked ~ [for="zoom-in"]{position:fixed; top: 1rem; left: 8vw; background-color:#eee; color:  }
+#show-hide:checked ~ [for="zoom-out"]{position:fixed; top: 1rem; left: 11vw; background-color:#eee; color:  }
 
 
 
@@ -17,47 +57,6 @@ input[type="radio"]:checked + label{ color: #000; background-color: #fff; }
 .download-link{ opacity:.75; margin: 0 0.5em; transition: all 0.14s ease; padding: .75em 0.5em; text-decoration: none; display: inline-block; white-space: nowrap; font-size: 0.5rem;   color:currentcolor; box-shadow: inset 0  -.1em; text-align: center; font-family: sans-serif; }
 .download-link:before{content:"\2193  "; }
 .download-link:hover{ opacity: 1; background-color: #a00; color: #fff; box-shadow: 0 0 0 1px #c00, 0 0.5em 1em rgba(0,0,0,0.5); }
-
-/*
-standard theme colors (MUST INCLUDE .gallery ) 
-*/
-
-.gallery .switch{fill:currentcolor;}
-.gallery .stroke-shade{stroke:rgba(0,0,0,0.2); stroke-width:.1; fill:none; }
-.gallery .fill-shade{fill:rgba(0,0,0,0.2);  }
-.gallery .fill-shade-weak{fill:rgba(0,0,0,0.1);  }
-.gallery .fill-light-shade{fill:rgba(255,255,255,0.5);  }
-.gallery .icon-shadow{ filter: url("#show-shadows"); opacity: 0.2; fill: #000; }
-.gallery .fill-navy{         fill: #004153;}
-.gallery .fill-teal{         fill: #007a87;}
-.gallery .fill-blue{         fill: #00a4e4; }
-.gallery .fill-light-blue{   fill: #d9f5fb; }
-.gallery .fill-red{          fill: #cc0000; }
-.gallery .fill-mid-red{      fill: #a30000; }
-.gallery .fill-dark-red{     fill: #820000; }
-.gallery .fill-darker-red{   fill: #770000; }
-.gallery .fill-darkest-red{  fill: #550000; }
-.gallery .fill-orange{       fill: #ec7a08; }
-.gallery .fill-yellow{       fill: #ffb612; }
-.gallery .fill-green{        fill: #94c947; }
-.gallery .fill-light-green{  fill: #d9f0a6; }
-.gallery .fill-darkest-slate{fill: #304551; }
-.gallery .fill-darker-slate{ fill: #4c575e; }
-.gallery .fill-dark-slate{   fill: #5e6a71; }
-.gallery .fill-slate{        fill: #8a969e; }
-.gallery .fill-darkest-grey{ fill: #444444; }
-.gallery .fill-darker-grey{  fill: #6a6a6a; }
-.gallery .fill-dark-grey{    fill: #949494; }
-.gallery .fill-darkish-grey{ fill: #a0a0a0; }
-.gallery .fill-mid-grey{     fill: #b8b9b9; }
-.gallery .fill-grey{     fill: #ccc; }
-
-.gallery .fill-light-grey{   fill: #e6e6e6; }
-.gallery .fill-lighter-grey{   fill: #f6f6f6; }
-.gallery .fill-lightest-grey{   fill: #fafafa; }
-.gallery .icon-virt-dash{  stroke: #aaa; fill: none; stroke-width: 0.1; stroke-linecap: round;stroke-dasharray: 0.3 0.3; stroke-opacity: 0.75; animation: virt-dash 999s linear infinite; }
-@keyframes virt-dash{ 100%{ stroke-dashoffset: 999; }}
-
 
 /*
 style switcher
@@ -100,7 +99,7 @@ styling the background and items of the gallery
 */
 
 
-.gallery{ transition: background-color 0.24s ease; text-align: center; min-height: 50vh; }
+.gallery{ transition: background-color 0.24s ease; text-align: center; min-height: 50vh; position:absolute; top: 0; min-height: 100vh; }
 .gallery svg{ width: 100%; height:85%; display: block; margin: 0 auto; margin-bottom: 4em; padding: 0; overflow: hidden; }
 svg *{ transition: all 0.3s ease; transition-delay:0; }
 
@@ -145,10 +144,10 @@ background switch feature
 search and results 
 */
 .search{ appearance: none; outline: 0; border: none; font-size: 1rem; height: 2rem; line-height: 2rem; text-indent: 0.5rem; }
-.searchbox{ vertical-align: middle; display: inline-block; position: relative; height: 2rem; line-height: 2rem; width: 10em; }
-.searchbox .search{ display: block; position: absolute; top: 0; width: 100%; left: 0; right: 0; bottom: 0; }
+.searchbox{ vertical-align: middle; display: inline-block; position: relative; height: 3rem; line-height: 3rem; width: 10em; }
+.searchbox .search{ display: block; position: absolute; top: 0; width: 100%; left: 0; right: 0; bottom: 0;  height:3rem}
 .searchbox .clear{ cursor: pointer; position: absolute; right: 0; display: block; appearance: none; overflow: hidden; border: 0; border-radius: 0; font-size: 1rem; text-indent: -4em; background-color: transparent; width: 2em; }
-.clear:before,.clear:after{ color: #777; content: ""; transition: all 0.6s cubic-bezier(0.6, 0.1, 0.1, 1.5); width: 0; border-right: 1px solid; display: block; height: 1.25em; top: 0.3em; right: 1em; position: absolute; transform: rotate(45deg); }
+.clear:before,.clear:after{ color: #777; content: ""; transition: all 0.6s cubic-bezier(0.6, 0.1, 0.1, 1.5); width: 0; border-right: 1px solid; display: block; height: 1.25em; top: .8em; right: 1em; position: absolute; transform: rotate(45deg); }
 .clear:before{ transform: rotate(-45deg); }
 .clear:hover:before{ transform: rotate(45deg); color: #222; }
 .clear:hover:after{ transform: rotate(-45deg); color: #222; }
