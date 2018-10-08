@@ -25,7 +25,7 @@ label[for="show-hide"]:before{content:""; position:fixed; width:2rem; left: .5re
 #show-hide:checked ~ label[for="show-hide"]:before{transform: rotate(-45deg); height: 0; border-width: .1em; top: 1.5rem}
 
 #show-hide:checked ~ .overlay{ background-color:rgba(0,0,0,0.8); position:fixed; top:0; left:0;  width: 33vw;bottom:0; z-index:1;}
-#show-hide:checked ~ .gallery{margin-left: 33vw;}
+#show-hide:checked ~ .gallery{left: 33vw;}
 
 #show-hide:checked ~ .searchbox{position:fixed; left: 1vw; top: 4rem; z-index:9; width: 31vw; height: 4rem;}
 
@@ -34,10 +34,11 @@ label[for="show-hide"]:before{content:""; position:fixed; width:2rem; left: .5re
 #show-hide:checked ~ [for="type-all"]{position:fixed; top: 8rem; left: 1vw; width: 10vw;}
 
 
-#show-hide:checked ~ [for="bg-white"]{position:fixed; top: 11rem;left:1vw; width: 7vw;}
-#show-hide:checked ~ [for="bg-light"]{position:fixed; top: 11rem;left:9vw; width: 7vw}
-#show-hide:checked ~ [for="bg-mid"]{position:fixed; top: 11rem;left:17vw; width: 7vw;}
-#show-hide:checked ~ [for="bg-dark"]{position:fixed; top: 11rem;left:25vw; width: 7vw;}
+#show-hide:checked ~ [for="bg-white"]{position:fixed; top: 11rem;left:1vw; width: 5.5vw;}
+#show-hide:checked ~ [for="bg-light"]{position:fixed; top: 11rem;left:7vw; width: 5.5vw}
+#show-hide:checked ~ [for="bg-mid"]{position:fixed; top: 11rem;left:13vw; width: 5.5vw;}
+#show-hide:checked ~ [for="bg-dark"]{position:fixed; top: 11rem;left:19vw; width: 5.5vw;}
+#show-hide:checked ~ [for="bg-black"]{position:fixed; top: 11rem;left:25vw; width: 7vw;}
 
 #show-hide:checked ~ [for="style-standard"]{position:fixed; top: 14rem;left:1vw; width: 7vw;}
 #show-hide:checked ~ [for="style-line"]{position:fixed; top: 14rem;left:9vw; width: 7vw;}
@@ -54,7 +55,7 @@ label[for="show-hide"]:before{content:""; position:fixed; width:2rem; left: .5re
 
 
 .download-container{ width: 100%; display: block; white-space: nowrap; bottom: 1em; left: 0; }
-.download-link{ opacity:.75; margin: 0 0.5em; transition: all 0.14s ease; padding: .75em 0.5em; text-decoration: none; display: inline-block; white-space: nowrap; font-size: 0.5rem;   color:currentcolor; box-shadow: inset 0  -.1em; text-align: center; font-family: sans-serif; }
+.download-link{ opacity:.75; margin: 0 0.5em; transition: all 0.14s ease; padding: .75em 0.5em; text-decoration: none; display: inline-block; white-space: nowrap; font-size: 0.5rem;   color:currentcolor; border-bottom: .1em solid; text-align: center; font-family: sans-serif; }
 .download-link:before{content:"\2193  "; }
 .download-link:hover{ opacity: 1; background-color: #a00; color: #fff; box-shadow: 0 0 0 1px #c00, 0 0.5em 1em rgba(0,0,0,0.5); }
 
@@ -99,7 +100,7 @@ styling the background and items of the gallery
 */
 
 
-.gallery{ transition: background-color 0.24s ease; text-align: center; min-height: 50vh; position:absolute; top: 0; min-height: 100vh; }
+.gallery{ transition: background-color 0.24s ease; text-align: center; min-height: 50vh; position:absolute; top: 0; min-height: 100vh; right:0; left:0}
 .gallery svg{ width: 100%; height:85%; display: block; margin: 0 auto; margin-bottom: 4em; padding: 0; overflow: hidden; }
 svg *{ transition: all 0.3s ease; transition-delay:0; }
 
@@ -124,16 +125,20 @@ background switch feature
 #bg-white:checked ~ .gallery{ background-color: #fff; }
 #bg-dark:checked ~ .gallery{ background-size: 1.2em 1.2em; background-position: 0 0, 0.6em 0.6em; background-color: #000; color: #eee; background-image: linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222), linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222); }
 
+#bg-black:checked ~ .gallery{background-image:none; color: #ccc; background-color: black;}
 /*logomono featuire*/
 
 
 #bg-mid:not(:checked) ~ .gallery .only-dark-background,
 #bg-dark:not(:checked) ~ .gallery .only-dark-background,
+#bg-black:not(:checked) ~ .gallery .only-dark-background,
 #bg-mid:checked ~ .gallery .only-light-background,
+#bg-black:checked ~ .gallery .only-light-background,
 #bg-dark:checked ~ .gallery .only-light-background{display:block !important; opacity:0 !important}
 
 #bg-mid:checked ~ .gallery .only-dark-background,
-#bg-dark:checked ~ .gallery .only-dark-background{display:block !important; opacity:1 !important;}
+#bg-dark:checked ~ .gallery .only-dark-background,
+#bg-black:checked ~ .gallery .only-dark-background{display:block !important; opacity:1 !important;}
 
 
 #bg-light:checked ~ .gallery{ color: #000; background-size: 1.2em 1.2em; background-position: 0 0, 0.6em 0.6em; background-color: #ddd; background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc); }
@@ -143,7 +148,7 @@ background switch feature
 /* 
 search and results 
 */
-.search{ appearance: none; outline: 0; border: none; font-size: 1rem; height: 2rem; line-height: 2rem; text-indent: 0.5rem; }
+.search{ appearance: none; outline: 0; border: none; font-size: 1rem; height: 2rem; line-height: 2rem; text-indent: 0.5rem; background-color:transparent; color: white; border-bottom:.075rem solid;}
 .searchbox{ vertical-align: middle; display: inline-block; position: relative; height: 3rem; line-height: 3rem; width: 10em; }
 .searchbox .search{ display: block; position: absolute; top: 0; width: 100%; left: 0; right: 0; bottom: 0;  height:3rem}
 .searchbox .clear{ cursor: pointer; position: absolute; right: 0; display: block; appearance: none; overflow: hidden; border: 0; border-radius: 0; font-size: 1rem; text-indent: -4em; background-color: transparent; width: 2em; }
