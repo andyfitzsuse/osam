@@ -34,6 +34,6 @@ standard theme colors (MUST INCLUDE .gallery )
 .gallery .fill-shade-weak{fill:rgba(0,0,0,0.1);  }
 .gallery .fill-light-shade{fill:rgba(255,255,255,0.5);  }
 .gallery .icon-shadow{ filter: url("#show-shadows"); opacity: 0.2; fill: #000; }
-.gallery .icon-virt-dash{  stroke: #aaa; fill: none; stroke-width: 0.1; stroke-linecap: round;stroke-dasharray: 0.3 0.3; stroke-opacity: 0.75; animation: virt-dash 999s linear infinite; }
+.gallery .icon-virt-dash{  stroke: currentcolor; fill: none; stroke-width: 0.1; stroke-linecap: round;stroke-dasharray: 0.3 0.3; stroke-opacity: 0.75; animation: virt-dash 999s linear infinite; }
 @keyframes virt-dash{ 100%{ stroke-dashoffset: 999; }}
 
