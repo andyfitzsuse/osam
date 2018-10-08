@@ -1,0 +1,39 @@
+/*
+standard theme colors (MUST INCLUDE .gallery ) 
+*/
+
+.gallery .fill-navy{         fill: #004153;}
+.gallery .fill-teal{         fill: #007a87;}
+.gallery .fill-blue{         fill: #00a4e4; }
+.gallery .fill-light-blue{   fill: #d9f5fb; }
+.gallery .fill-red{          fill: #cc0000; }
+.gallery .fill-mid-red{      fill: #a30000; }
+.gallery .fill-dark-red{     fill: #820000; }
+.gallery .fill-darker-red{   fill: #770000; }
+.gallery .fill-darkest-red{  fill: #550000; }
+.gallery .fill-orange{       fill: #ec7a08; }
+.gallery .fill-yellow{       fill: #ffb612; }
+.gallery .fill-green{        fill: #94c947; }
+.gallery .fill-light-green{  fill: #d9f0a6; }
+.gallery .fill-darkest-slate{fill: #304551; }
+.gallery .fill-darker-slate{ fill: #4c575e; }
+.gallery .fill-dark-slate{   fill: #5e6a71; }
+.gallery .fill-slate{        fill: #8a969e; }
+.gallery .fill-darkest-grey{ fill: #444444; }
+.gallery .fill-darker-grey{  fill: #6a6a6a; }
+.gallery .fill-dark-grey{    fill: #949494; }
+.gallery .fill-darkish-grey{ fill: #a0a0a0; }
+.gallery .fill-mid-grey{     fill: #b8b9b9; }
+.gallery .fill-grey{         fill: #cccccc; }
+.gallery .fill-light-grey{   fill: #e6e6e6; }
+.gallery .fill-lighter-grey{ fill: #f6f6f6; }
+.gallery .fill-lightest-grey{fill: #fafafa; }
+.gallery .switch{fill:currentcolor;}
+.gallery .stroke-shade{stroke:rgba(0,0,0,0.2); stroke-width:.1; fill:none; }
+.gallery .fill-shade{fill:rgba(0,0,0,0.2);  }
+.gallery .fill-shade-weak{fill:rgba(0,0,0,0.1);  }
+.gallery .fill-light-shade{fill:rgba(255,255,255,0.5);  }
+.gallery .icon-shadow{ filter: url("#show-shadows"); opacity: 0.2; fill: #000; }
+.gallery .icon-virt-dash{  stroke: #aaa; fill: none; stroke-width: 0.1; stroke-linecap: round;stroke-dasharray: 0.3 0.3; stroke-opacity: 0.75; animation: virt-dash 999s linear infinite; }
+@keyframes virt-dash{ 100%{ stroke-dashoffset: 999; }}
+
