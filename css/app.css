@@ -16,7 +16,7 @@ input[type="radio"]:checked + label{ color: #000; background-color: #fff; }
 #show-hide:checked ~ label{}
 
 #show-hide{opacity:0; position:absolute; z-index:-1;}
-label[for="show-hide"]{z-index:2;position:fixed; width: 3rem; height:3rem; background-color:#fff; display:block !important;  box-shadow: inset 0 0 0 .2em currentcolor ;top:0; left:0; margin:0; overflow:hidden; text-indent: 4rem;}
+label[for="show-hide"]{z-index:2;position:fixed; color:#444;border-bottom:0; width: 3rem; height:3rem; background-color:#fff; display:block !important;  box-shadow: inset 0 0 0 .2em currentcolor ;top:0; left:0; margin:0; overflow:hidden; text-indent: 4rem;}
 label[for="show-hide"]:after{content:""; position:fixed; width:2rem; left: .5rem; border-top: .2em solid currentcolor; height: 1.4rem;border-bottom: .2em solid currentcolor; top: .6rem; transition: all .15s ease;}
 label[for="show-hide"]:before{content:""; position:fixed; width:2rem; left: .5rem; border-top: .1em solid currentcolor; height: 0rem;border-bottom: .1em solid currentcolor; top: 1.45rem;transition: all .15s ease;}
 
@@ -48,9 +48,9 @@ label[for="show-hide"]:before{content:""; position:fixed; width:2rem; left: .5re
 #show-hide:checked ~ [for="style-solid"]{position:fixed; top: 17rem;left:9vw; width: 7vw;}
 
 
-#show-hide:checked ~ [for="zoom-normal"]{position:fixed; top: 1rem; left: 5vw; background-color:#eee; color:  }
-#show-hide:checked ~ [for="zoom-in"]{position:fixed; top: 1rem; left: 8vw; background-color:#eee; color:  }
-#show-hide:checked ~ [for="zoom-out"]{position:fixed; top: 1rem; left: 11vw; background-color:#eee; color:  }
+#show-hide:checked ~ [for="zoom-normal"]{position:fixed; top: 1rem; left: 5vw;  }
+#show-hide:checked ~ [for="zoom-in"]{position:fixed; top: 1rem; left: 8vw;  }
+#show-hide:checked ~ [for="zoom-out"]{position:fixed; top: 1rem; left: 11vw;  }
 
 
 
@@ -107,7 +107,7 @@ svg *{ transition: all 0.3s ease; transition-delay:0; }
 .gallery .logo path{ fill: currentcolor; }
 .gallery > div{ transition: all 0.3s ease; max-width: 100%; max-height: 100%; position: relative; width: 12em; height: 12em; display: inline-block; padding: 0.5rem; vertical-align: top; padding-bottom: 3rem; }
 .gallery span{ position: absolute; }
-.gallery span.tags{ width: 100%; opacity:.4; text-align: center; left: 0; bottom: 3rem; text-transform: uppercase; font-size: 0.5em; }
+.gallery span.tags{ width: 100%; opacity:1; text-align: center; left: 0; bottom: 3rem; text-transform: uppercase; font-size: 0.5em; }
 
 /*
 zoom feature
@@ -117,13 +117,13 @@ zoom feature
 #zoom-in:checked ~ .gallery > div{ font-size: 2rem; }
 #zoom-out:checked ~ .gallery .tags{ display: none; }
 #zoom-in:checked ~ .gallery .tags{ font-size: 0.6rem; bottom: 7em; }
-[for="zoom-normal"],[for="zoom-in"],[for="zoom-out"]{ box-shadow: 0 1px 5px rgba(0,0,0,0.2); display: inline-block; vertical-align: middle; width: 2em; height: 2em; padding: 0; line-height: 2em; border-radius: 50%; margin: 0 -0.1em; }
+[for="zoom-normal"],[for="zoom-in"],[for="zoom-out"]{ box-shadow: 0 0 0 .075rem; display: inline-block; vertical-align: middle; width: 3em; height: 3em; padding: 0; line-height: 3em; border-radius: 50%; margin: 0 -0.1em; }
 
 /*
 background switch feature 
 */
-#bg-white:checked ~ .gallery{ background-color: #fff; }
-#bg-dark:checked ~ .gallery{ background-size: 1.2em 1.2em; background-position: 0 0, 0.6em 0.6em; background-color: #000; color: #eee; background-image: linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222), linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222); }
+#bg-white:checked ~ .gallery{ background-color: #fff; color:#444}
+#bg-dark:checked ~ .gallery{ background-size: 12px 12px; background-position: 0 0,6px 6px; background-color: #000; color: #eee; background-image: linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222), linear-gradient(45deg, #222 25%, transparent 25%, transparent 75%, #222 75%, #222); }
 
 #bg-black:checked ~ .gallery{background-image:none; color: #ccc; background-color: black;}
 /*logomono featuire*/
@@ -141,8 +141,8 @@ background switch feature
 #bg-black:checked ~ .gallery .only-dark-background{display:block !important; opacity:1 !important;}
 
 
-#bg-light:checked ~ .gallery{ color: #000; background-size: 1.2em 1.2em; background-position: 0 0, 0.6em 0.6em; background-color: #ddd; background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc); }
-#bg-mid:checked ~ .gallery{ color:#fff;background-size: 1.2em 1.2em; background-position: 0 0, 0.6em 0.6em; background-color: #777; background-image: linear-gradient(45deg, #888 25%, transparent 25%, transparent 75%, #888 75%, #888), linear-gradient(45deg, #888 25%, transparent 25%, transparent 75%, #888 75%, #888); }
+#bg-light:checked ~ .gallery{ color: #000; background-size: 12px 12px; background-position: 0 0, 6px 6px; background-color: #ddd; background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc); }
+#bg-mid:checked ~ .gallery{ color:#fff;background-size: 12px 12px; background-position: 0 0, 6px 6px; background-color: #777; background-image: linear-gradient(45deg, #888 25%, transparent 25%, transparent 75%, #888 75%, #888), linear-gradient(45deg, #888 25%, transparent 25%, transparent 75%, #888 75%, #888); }
 
 
 /* 
@@ -152,10 +152,10 @@ search and results
 .searchbox{ vertical-align: middle; display: inline-block; position: relative; height: 3rem; line-height: 3rem; width: 10em; }
 .searchbox .search{ display: block; position: absolute; top: 0; width: 100%; left: 0; right: 0; bottom: 0;  height:3rem}
 .searchbox .clear{ cursor: pointer; position: absolute; right: 0; display: block; appearance: none; overflow: hidden; border: 0; border-radius: 0; font-size: 1rem; text-indent: -4em; background-color: transparent; width: 2em; }
-.clear:before,.clear:after{ color: #777; content: ""; transition: all 0.6s cubic-bezier(0.6, 0.1, 0.1, 1.5); width: 0; border-right: 1px solid; display: block; height: 1.25em; top: .8em; right: 1em; position: absolute; transform: rotate(45deg); }
+.clear:before,.clear:after{ color: #fff; content: ""; transition: all 0.6s cubic-bezier(0.6, 0.1, 0.1, 1.5); width: 0; border-right: .1rem solid; display: block; height: 1.25em; top: .8em; right: 1em; position: absolute; transform: rotate(45deg); }
 .clear:before{ transform: rotate(-45deg); }
-.clear:hover:before{ transform: rotate(45deg); color: #222; }
-.clear:hover:after{ transform: rotate(-45deg); color: #222; }
+.clear:hover:before{ transform: rotate(45deg); color: #fff; }
+.clear:hover:after{ transform: rotate(-45deg); color: #fff; }
 .miss{ display: none !important; }
 .match{ opacity: 1; display: inline-block; }
 .match svg{ animation: match 0.3s ease; }
