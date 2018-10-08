@@ -1,12 +1,15 @@
 body{ font-family: sans-serif; font-size: 1rem; background-color: #eee; user-select: none; text-align: center; margin: 0; padding: 0; }
 *{ box-sizing: border-box; }
 
+
+
+
 /*
 form
 */
 body > h3{ margin-bottom: 0; font-size: 1rem; display: inline-block; margin-left: 2rem; }
-/* hide the real tabs */  input[type="radio"]{ opacity: 0; position: absolute; z-index: -1; }
-/*using labels for aesthetics */ label{ z-index:3; position:relative;text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.6rem; user-select: none; cursor: pointer; color: #ccc; padding: 1em; display: inline-block; border-bottom:.1em solid #555;}
+/* hide the real tabs */  body >  input[type="radio"]{ opacity: 0; position: absolute; z-index: -1; }
+/*using labels for aesthetics */ body >  label{ z-index:3; position:relative;text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.6rem; user-select: none; cursor: pointer; color: #ccc; padding: 1em; display: inline-block; border-bottom:.1em solid #555;}
 input[type="radio"]:checked + label{ color: #000; background-color: #fff; }
 
 
@@ -54,8 +57,8 @@ label[for="show-hide"]:before{content:""; position:fixed; width:2rem; left: .5re
 
 
 
-.download-container{ width: 100%; display: block; white-space: nowrap; bottom: 1em; left: 0; }
-.download-link{ opacity:.75; margin: 0 0.5em; transition: all 0.14s ease; padding: .75em 0.5em; text-decoration: none; display: inline-block; white-space: nowrap; font-size: 0.5rem;   color:currentcolor; border-bottom: .1em solid; text-align: center; font-family: sans-serif; }
+.download-container{ width: 100%; display: block; white-space: nowrap; bottom: 0em; left: 0; }
+.download-link{ opacity:.75; margin: 0 0.25em; transition: all 0.14s ease; padding: .75em 0.5em; text-decoration: none; display: inline-block; white-space: nowrap; font-size: 1em;   color:currentcolor; border-bottom: none; text-align: center; font-family: sans-serif; }
 .download-link:before{content:"\2193  "; }
 .download-link:hover{ opacity: 1; background-color: #a00; color: #fff; box-shadow: 0 0 0 1px #c00, 0 0.5em 1em rgba(0,0,0,0.5); }
 
@@ -63,9 +66,9 @@ label[for="show-hide"]:before{content:""; position:fixed; width:2rem; left: .5re
 style switcher
 */
 #style-standard:checked ~ #bg-white:checked ~ .gallery .logo path {color:#555}
-#style-solid:checked ~ .gallery .icon *{ stroke: #000 !important; vector-effect:non-scaling-stroke !important; stroke-width: 1 !important;  stroke-opacity: 0.8 !important; }
-#style-solid:checked ~ .gallery .icon-virt-dash{ stroke-opacity: 1; stroke: currentcolor; }
-#style-solid:checked ~ .gallery .icon-shadow{ filter: none; }
+#style-retro:checked ~ .gallery .icon *{ stroke: #000 !important; vector-effect:non-scaling-stroke !important; stroke-width: 1 !important;  stroke-opacity: 0.8 !important; }
+#style-retro:checked ~ .gallery .icon-virt-dash{ stroke-opacity: 1; stroke: currentcolor; }
+#style-retro:checked ~ .gallery .icon-shadow{ filter: none; }
 #style-grey:checked ~ .gallery svg{ filter: grayscale(1) contrast(0.6) brightness(1.2); }
 #style-grey:checked ~ .gallery .icon-virt-dash{ opacity: 1; stroke: currentcolor; }
 
@@ -94,14 +97,14 @@ style switcher
 
 #style-line:checked ~ .gallery .icon .icon-virt-dash{vector-effect:unset !important; stroke-width: .23 !important }
 #style-wireframe:checked ~ .gallery .icon .icon-virt-dash,
-#style-solid:checked ~ .gallery .icon .icon-virt-dash{vector-effect:unset !important; stroke-width: .1 !important }
+#style-retro:checked ~ .gallery .icon .icon-virt-dash{vector-effect:unset !important; stroke-width: .1 !important }
 /* 
 styling the background and items of the gallery 
 */
 
 
 .gallery{ transition: background-color 0.24s ease; text-align: center; min-height: 50vh; position:absolute; top: 0; min-height: 100vh; right:0; left:0}
-.gallery svg{ width: 100%; height:85%; display: block; margin: 0 auto; margin-bottom: 4em; padding: 0; overflow: hidden; }
+.gallery svg{ width: 100%; height:85%; display: block; margin: 0 auto; margin-bottom: 0em; padding: 0; overflow: hidden; }
 svg *{ transition: all 0.3s ease; transition-delay:0; }
 
 .gallery .logo path{ fill: currentcolor; }
@@ -160,3 +163,14 @@ search and results
 .match{ opacity: 1; display: inline-block; }
 .match svg{ animation: match 0.3s ease; }
 @keyframes match{ 0%{ box-shadow: inset 0 0 0 0.2em; transform: translate(0, -0.5em); opacity: 0; }}
+
+.gallery > div{position:relative; text-align:center; }
+
+
+[name="selection"]{-webkit-appearance:none; opacity:1; outline:0; position:absolute; margin:0; display:block; top:0; left:0; right:0; bottom:0; width: 100%; height: 100%; background-color:transparent;;cursor:pointer; z-index:1; }
+
+[name="selection"]:checked{box-shadow:  0 .2em 2em  rgba(0,0,0,0.2) }
+
+.download-container, .tags{display:none;}
+[name="selection"]:checked ~ .tags, [name="selection"]:checked ~ .download-container{display:block; z-index:99}
+

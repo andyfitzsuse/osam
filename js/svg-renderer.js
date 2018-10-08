@@ -33,6 +33,8 @@ var getElementStyleString = function(sourceEl, cloneEl) {
 };
 
 var serializeSvg = function(sourceSvgElement, width, height) {
+
+
   var svgClone = sourceSvgElement.cloneNode(true);
   if (width) {
     svgClone.setAttribute('width', width);
@@ -67,7 +69,12 @@ var createHyperlink = function(url, text) {
 };
 
 // Making the buttons
+  
+
+  
+// Making the buttons
 var createImgDownloadButton = function(onclickPng, onclickSvg) {
+  
   var container = document.createElement('span');
   container.className = 'download-container';
   
@@ -78,6 +85,7 @@ var createImgDownloadButton = function(onclickPng, onclickSvg) {
   }
   
   var svgButton = createHyperlink('#', 'SVG');
+  
   svgButton.className = 'download-link';
   if (onclickSvg) {
     svgButton.onclick = onclickSvg;
