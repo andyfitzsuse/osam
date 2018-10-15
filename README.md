@@ -1,4 +1,4 @@
-# OSAM   Open Source Asset Manager
+# OSAM:   Open Source Asset Manager
 
 https://andyfitz.github.io/osam
 
