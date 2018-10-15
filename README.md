@@ -1,5 +1,5 @@
 # OSAM:   Open Source Asset Manager
 
-https://andyfitz.github.io/osam
+https://osam.app
 
-A tidy app for managing, searching, re-styling, and downloading SVG assets
+A tiny app that may someday be handy for managing, searching, re-styling, and downloading SVG assets
