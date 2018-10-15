@@ -1,5 +1,5 @@
-# icon-tester
+# OSAM   Open Source Asset Manager
 
-https://andyfitz.github.io/icon-tester/
+https://andyfitz.github.io/osam
 
-nifty icon testing app
+A tidy app for managing, searching, re-styling, and downloading SVG assets
