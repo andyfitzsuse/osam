@@ -22,7 +22,7 @@ And for content contributors / admins:
 
 Currently OSAM is a very simple VUE.js app that is being bundled in Electron for distribution as an offline app.
 
-The example files hosted in this repo are for testing only.  Ideally OSAM will work as a DAM for various projects using their own files.
+The example files hosted in this repo are for testing only.  Ideally OSAM will work as a DAM for various projects using their own files and style parameters.
 
 
 - [x] live SVG styling with external CSS 
