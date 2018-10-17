@@ -2,12 +2,12 @@
 
  *ȯsäm*  /ˈɔːsəm/ *awesome*  https://osam.app is a tiny app that may someday be handy for managing, searching, re-styling, and downloading SVG assets.
  
- Here's how it will work 
+ Here's how it will work:
  
  ![app summary for users](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/user.png)
 
 
-And for content admins
+And for content contributors / admins:
 
 ![app summary for admins](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/admin.png)
 
@@ -16,7 +16,8 @@ And for content admins
 
 ### Status ?
 
-Currently OSAM is a very simple VUE.js app that is being bundled in Electron for use as an offline app
+Currently OSAM is a very simple VUE.js app that is being bundled in Electron for distribution as an offline app
+The assets hosted in this repo are for testing only.  Ideally OSAM can work as a DAM for various projects.
 
 
 - [x] live SVG styling with external CSS 
@@ -52,7 +53,6 @@ npm run lint
 
 ```
 
-https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/osam-user.png
 
 ---
 
