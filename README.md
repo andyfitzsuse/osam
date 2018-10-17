@@ -2,6 +2,10 @@
 
  *ȯsäm*  /ˈɔːsəm/ *awesome*  https://osam.app is a tiny app that may someday be handy for managing, searching, re-styling, and downloading SVG assets.
  
+ 
+  ![example image](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/manipulation.gif)
+
+
  Here's how it will work:
  
  ![app summary for users](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/user.png)
