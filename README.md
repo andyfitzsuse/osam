@@ -1,7 +1,8 @@
 ![logo](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/graphic.png)
 
  *ȯsäm*  /ˈɔːsəm/ *awesome*  https://osam.app is a tiny app to help manage, search, re-style, and render elemental graphics; like illustrations, icons, logos, badges, and symbols.
-Giving graphic-seekers under your brand: exactly what they need, where they need it, and how they need it delivered.  With single-source files being remixable live within the app.
+
+OSAM gives graphic-seekers under your brand: exactly what they need, where they need it, and how they need it delivered.  With single-source files being remixable live within the app.
  
  
   ![example image](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/manipulation.gif)
