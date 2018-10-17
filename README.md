@@ -1,4 +1,4 @@
-![logo](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/osam-graphic.png)
+![logo](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/graphic.png)
 
  *ȯsäm*  /ˈɔːsəm/ *awesome*  https://osam.app is a tiny app that may someday be handy for managing, searching, re-styling, and downloading SVG assets.
  
