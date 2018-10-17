@@ -1,6 +1,7 @@
 ![logo](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/graphic.png)
 
- *ȯsäm*  /ˈɔːsəm/ *awesome*  https://osam.app is a tiny app that will soon be handy for managing, searching, re-styling, and then downloading graphics. Delivering exactly what you were searching for, how you want it, when you need it.
+ *ȯsäm*  /ˈɔːsəm/ *awesome*  https://osam.app is a tiny app to help manage, search, re-style, and render elemental graphics; like illustrations, icons, logos, badges, and symbols.
+Giving graphic-seekers under your brand: exactly what they need, where they need it, and how they need it delivered.  With single-source files being remixable live within the app.
  
  
   ![example image](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/manipulation.gif)
@@ -61,4 +62,4 @@ npm run lint
 
 ---
 
-This project was generated with (https://github.com/SimulatedGREG/electron-vue/tree/cf53551a209b49220525e7de80f1c541d7096aef) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
+This project was generated with [Electron-Vue](https://github.com/SimulatedGREG/electron-vue/) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
