@@ -1,9 +1,11 @@
 <template>
   <div id="wrapper">
-<h1>OSAM</h1>
+    <img id="logo" src="~@/assets/logo.png" alt="electron-vue">
     <main>
       <div class="left-side">
-         
+        <span class="title">
+          Welcome to your new project!
+        </span>
         <system-information></system-information>
       </div>
 
@@ -50,7 +52,7 @@
     padding: 0;
   }
 
-  body { font-family: sans-serif; }
+  body { font-family: 'Source Sans Pro', sans-serif; }
 
   #wrapper {
     background:
@@ -62,6 +64,12 @@
     height: 100vh;
     padding: 60px 80px;
     width: 100vw;
+  }
+
+  #logo {
+    height: auto;
+    margin-bottom: 20px;
+    width: 420px;
   }
 
   main {
