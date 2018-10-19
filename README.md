@@ -1,21 +1,22 @@
-![logo](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/256x256.png)
+<img src="https://osam.app/img/icon.svg" />
 
  *ȯsäm*  /ˈɔːsəm/ *awesome*  https://osam.app is a tiny app to help manage, search, re-style, and render elemental graphics; like illustrations, icons, logos, badges, and symbols.
 
 OSAM gives graphic-seekers under your brand: exactly what they need, where they need it, and how they need it delivered.  With single-source files being remixable live within the app.
  
  
+
   ![example image](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/manipulation.gif)
 
 
  Here's how it will work:
  
- ![app summary for users](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/user.png)
+ ![app summary for users](https://osam.app/img/user.svg)
 
 
 And for content contributors / admins:
 
-![app summary for admins](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/admin.png)
+![app summary for admins](https://osam.app/img/admin.svg)
 
 
 
