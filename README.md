@@ -1,4 +1,4 @@
-![logo](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/graphic.png)
+![logo](https://raw.githubusercontent.com/andyfitz/osam/gh-pages/img/256x256.png)
 
  *ȯsäm*  /ˈɔːsəm/ *awesome*  https://osam.app is a tiny app to help manage, search, re-style, and render elemental graphics; like illustrations, icons, logos, badges, and symbols.
 
