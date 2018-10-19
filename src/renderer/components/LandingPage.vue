@@ -3,20 +3,13 @@
     <img id="logo" src="~@/assets/logo.png" alt="electron-vue">
     <main>
       <div class="left-side">
-        <span class="title">
-          Welcome to your new project!
-        </span>
+       
         <system-information></system-information>
       </div>
 
       <div class="right-side">
         <div class="doc">
-          <div class="title">Getting Started</div>
-          <p>
-            electron-vue comes packed with detailed documentation that covers everything from
-            internal configurations, using the project structure, building your application,
-            and so much more.
-          </p>
+     
           <button @click="open('https://simulatedgreg.gitbooks.io/electron-vue/content/')">Read the Docs</button><br><br>
         </div>
         <div class="doc">
@@ -55,13 +48,15 @@
   body { font-family: 'Source Sans Pro', sans-serif; }
 
   #wrapper {
+    color: #eee;
+   
     background:
       radial-gradient(
         ellipse at top left,
-        rgba(255, 255, 255, 1) 40%,
-        rgba(229, 229, 229, .9) 100%
+        #123 40%,
+        #234 100%
       );
-    height: 100vh;
+    min-height: 100vh;
     padding: 60px 80px;
     width: 100vw;
   }
@@ -85,13 +80,11 @@
   }
 
   .welcome {
-    color: #555;
     font-size: 23px;
     margin-bottom: 10px;
   }
 
   .title {
-    color: #2c3e50;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 6px;
@@ -103,7 +96,6 @@
   }
 
   .doc p {
-    color: black;
     margin-bottom: 10px;
   }
 
@@ -120,6 +112,7 @@
     box-sizing: border-box;
     border: 1px solid #4fc08d;
   }
+
 
   .doc button.alt {
     color: #42b983;
